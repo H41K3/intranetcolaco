@@ -1,48 +1,111 @@
 const TIPO = { LINK: 0, DOWNLOAD: 1, SUBTITULO: 2, PASTA: 3 };
 
 const SETORES = {
-  "contabil": {
+  contabil: {
     nome: "Setor Contábil",
     links: [
       { type: TIPO.SUBTITULO, titulo: "Web" },
       {
-        type: TIPO.PASTA, titulo: "Ferramentas e Informação", subLinks: [
+        type: TIPO.PASTA,
+        titulo: "Ferramentas e Informação",
+        subLinks: [
           { titulo: "Conversor IlovePDF", url: "https://www.ilovepdf.com/pt" },
           { titulo: "Infomoney", url: "https://www.infomoney.com.br/" },
-          { titulo: "OFX Fácil", url: "https://www.ofxfacil.com.br/" }
-        ]
+          { titulo: "OFX Fácil", url: "https://www.ofxfacil.com.br/" },
+        ],
       },
       {
-        type: TIPO.PASTA, titulo: "Portais Estaduais e Federais", subLinks: [
-          { titulo: "eCAc", url: "https://cav.receita.fazenda.gov.br/autenticacao/login" },
-          { titulo: "ITR", url: "https://servicos.receitafederal.gov.br/servico/ditrweb" },
+        type: TIPO.PASTA,
+        titulo: "Portais Estaduais e Federais",
+        subLinks: [
+          {
+            titulo: "eCAc",
+            url: "https://cav.receita.fazenda.gov.br/autenticacao/login",
+          },
+          {
+            titulo: "ITR",
+            url: "https://servicos.receitafederal.gov.br/servico/ditrweb",
+          },
           { titulo: "JUCEPAR", url: "https://www.juntacomercial.pr.gov.br/" },
-          { titulo: "PGMEI", url: "https://www8.receita.fazenda.gov.br/SimplesNacional/Aplicacoes/ATSPO/pgmei.app/Identificacao" },
-          { titulo: "Receita Estadual", url: "https://receita.pr.gov.br/login" },
-          { titulo: "Receita Federal", url: "https://www.gov.br/receitafederal/pt-br" },
-          { titulo: "Redesim", url: "https://www.gov.br/empresas-e-negocios/pt-br/redesim" },
-          { titulo: "SicalcWeb", url: "https://sicalc.receita.fazenda.gov.br/sicalc/principal" },
-          { titulo: "SINTEGRA", url: "https://www.sintegra.gov.br/" }
-        ]
+          {
+            titulo: "PGMEI",
+            url: "https://www8.receita.fazenda.gov.br/SimplesNacional/Aplicacoes/ATSPO/pgmei.app/Identificacao",
+          },
+          {
+            titulo: "Receita Estadual",
+            url: "https://receita.pr.gov.br/login",
+          },
+          {
+            titulo: "Receita Federal",
+            url: "https://www.gov.br/receitafederal/pt-br",
+          },
+          {
+            titulo: "Redesim",
+            url: "https://www.gov.br/empresas-e-negocios/pt-br/redesim",
+          },
+          {
+            titulo: "SicalcWeb",
+            url: "https://sicalc.receita.fazenda.gov.br/sicalc/principal",
+          },
+          { titulo: "SINTEGRA", url: "https://www.sintegra.gov.br/" },
+        ],
       },
       {
-        type: TIPO.PASTA, titulo: "Sistemas de Gestão e Operações", subLinks: [
-          { titulo: "Conta +JE", url: "https://contamaisje.tse.jus.br/publico/index" },
+        type: TIPO.PASTA,
+        titulo: "Sistemas de Gestão e Operações",
+        subLinks: [
+          {
+            titulo: "Conta +JE",
+            url: "https://contamaisje.tse.jus.br/publico/index",
+          },
           { titulo: "Econet", url: "https://www.econeteditora.com.br/" },
-          { titulo: "FGTS Digital", url: "https://fgtsdigital.sistema.gov.br/portal/login" },
-          { titulo: "ISS Curitiba", url: "https://financas.curitiba.pr.gov.br/conteudo/iss-curitiba-acesso-ao-sistema-emissao-da-nota-curitibana/70" },
+          {
+            titulo: "FGTS Digital",
+            url: "https://fgtsdigital.sistema.gov.br/portal/login",
+          },
+          {
+            titulo: "ISS Curitiba",
+            url: "https://financas.curitiba.pr.gov.br/conteudo/iss-curitiba-acesso-ao-sistema-emissao-da-nota-curitibana/70",
+          },
           { titulo: "Jettax", url: "https://admin.jettax360.com.br/" },
-          { titulo: "SISCONT", url: "https://crbm-06.implanta.net.br/auth/login?state=https:%2F%2Fcrbm-06.implanta.net.br%2Flogon%2F%3FReturnUrl%3D%252fsiscont%252fsistema%252flogin.aspx%253fReturnUrl%253d%25252fsiscont%25252fdefault.aspx" }
-        ]
+          {
+            titulo: "SISCONT",
+            url: "https://crbm-06.implanta.net.br/auth/login?state=https:%2F%2Fcrbm-06.implanta.net.br%2Flogon%2F%3FReturnUrl%3D%252fsiscont%252fsistema%252flogin.aspx%253fReturnUrl%253d%25252fsiscont%25252fdefault.aspx",
+          },
+        ],
       },
       { type: TIPO.SUBTITULO, titulo: "Download" },
-      { type: TIPO.DOWNLOAD, titulo: "DIMOB", url: "https://servicos.receita.fazenda.gov.br/publico/programas/dimob/dimobwin32v2.8g.exe" },
-      { type: TIPO.DOWNLOAD, titulo: "DMED", url: "https://servicos.receita.fazenda.gov.br/publico/programas/Dmed/2026/Dmed2026Win64v1.1.exe" },
-      { type: TIPO.DOWNLOAD, titulo: "ECF", url: "https://servicos.receita.fazenda.gov.br/publico/programas/Sped/ECF/SpedEcf_w64-12.2.8.exe" },
-      { type: TIPO.DOWNLOAD, titulo: "IRPF 2026", url: "https://downloadirpf.receita.fazenda.gov.br/irpf/2026/irpf/arquivos/IRPF2026Win64v1.5.exe" },
-      { type: TIPO.DOWNLOAD, titulo: "ReceitanetBX", url: "https://servicos.receita.fazenda.gov.br/publico/programas/ReceitanetBX/ReceitanetBX-1.10.0-x64.exe" },
-      { type: TIPO.DOWNLOAD, titulo: "Sped Contábil", url: "https://servicos.receita.fazenda.gov.br/publico/programas/Sped/SpedContabil/SPEDContabil_w64-10.4.1.exe" }
-    ]
+      {
+        type: TIPO.DOWNLOAD,
+        titulo: "DIMOB",
+        url: "https://servicos.receita.fazenda.gov.br/publico/programas/dimob/dimobwin32v2.8g.exe",
+      },
+      {
+        type: TIPO.DOWNLOAD,
+        titulo: "DMED",
+        url: "https://servicos.receita.fazenda.gov.br/publico/programas/Dmed/2026/Dmed2026Win64v1.1.exe",
+      },
+      {
+        type: TIPO.DOWNLOAD,
+        titulo: "ECF",
+        url: "https://servicos.receita.fazenda.gov.br/publico/programas/Sped/ECF/SpedEcf_w64-12.2.8.exe",
+      },
+      {
+        type: TIPO.DOWNLOAD,
+        titulo: "IRPF 2026",
+        url: "https://downloadirpf.receita.fazenda.gov.br/irpf/2026/irpf/arquivos/IRPF2026Win64v1.5.exe",
+      },
+      {
+        type: TIPO.DOWNLOAD,
+        titulo: "ReceitanetBX",
+        url: "https://servicos.receita.fazenda.gov.br/publico/programas/ReceitanetBX/ReceitanetBX-1.10.0-x64.exe",
+      },
+      {
+        type: TIPO.DOWNLOAD,
+        titulo: "Sped Contábil",
+        url: "https://servicos.receita.fazenda.gov.br/publico/programas/Sped/SpedContabil/SPEDContabil_w64-10.4.1.exe",
+      },
+    ],
   },
   financeiro: {
     nome: "Setor Financeiro",
@@ -473,6 +536,33 @@ const lista = $("rows");
 const caixaBusca = $("search-box");
 const campoBusca = $("search");
 const navInicio = document.querySelector(".nav-btn[data-home]");
+const menuLateral = document.querySelector("aside");
+const btnMenu = $("menu-toggle");
+const btnFecharMenu = $("menu-close");
+const backdrop = $("drawer-backdrop");
+
+function abrirMenu() {
+  if (!menuLateral) return;
+  menuLateral.classList.add("open");
+  backdrop?.classList.add("open");
+  document.body.classList.add("menu-open");
+  btnMenu?.setAttribute("aria-expanded", "true");
+}
+
+function fecharMenu() {
+  if (!menuLateral) return;
+  menuLateral.classList.remove("open");
+  backdrop?.classList.remove("open");
+  document.body.classList.remove("menu-open");
+  btnMenu?.setAttribute("aria-expanded", "false");
+}
+
+btnMenu?.addEventListener("click", abrirMenu);
+btnFecharMenu?.addEventListener("click", fecharMenu);
+backdrop?.addEventListener("click", fecharMenu);
+document.addEventListener("keydown", (e) => {
+  if (e.key === "Escape") fecharMenu();
+});
 
 document
   .querySelectorAll("[data-dep]")
@@ -500,6 +590,9 @@ function abrirView(viewId, navBtn) {
     .querySelectorAll(".nav-btn")
     .forEach((b) => b.classList.toggle("active", b === navBtn));
   if (campoBusca) campoBusca.value = "";
+  fecharMenu();
+  window.scrollTo(0, 0);
+  document.querySelector("main")?.scrollTo(0, 0);
 }
 
 function irInicio() {
@@ -568,7 +661,7 @@ function criarPasta(item) {
     if (!isOpen) {
       btn.classList.add("active");
       panel.classList.add("open");
-      panel.style.maxHeight = panel.scrollHeight + "px";
+      panel.style.maxHeight = panel.scrollHeight + 24 + "px";
     }
   });
   container.append(btn, panel);
